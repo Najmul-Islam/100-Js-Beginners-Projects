@@ -22,22 +22,25 @@
 // }())
 
 (function () {
-    const submitBtn = document.querySelector('#submitbtn');
+    const form = document.querySelector("#message-form");
 
-    submitBtn.addEventListener('click', function (e) {
-        e.preventDefault()
-        const inputMessage = document.querySelector('#message');
-        const showVlue = document.querySelector('.message-content')
-        const feedback = document.querySelector('.feedback')
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-        if (inputMessage.value === "") {
+        const message = document.getElementById('message');
+        const feedback = document.querySelector('.feedback');
+        const messageContent = document.querySelector('.message-container');
+
+        if (message.value === "") {
             feedback.classList.add('show');
             setTimeout(function () {
-                feedback.classList.remove('show');
+                feedback.classList.remove('show')
             }, 3000);
         } else {
-            showVlue.textContent = inputMessage.value;
-            inputMessage.value = '';
+            messageContent.textContent = message.value
+            message.value = ""
         }
+
+
     })
-}())
+})();
