@@ -29,7 +29,7 @@
 
         const message = document.getElementById('message');
         const feedback = document.querySelector('.feedback');
-        const messageContent = document.querySelector('.message-container');
+        const messageContent = document.querySelector('.message-content');
 
         if (message.value === "") {
             feedback.classList.add('show');

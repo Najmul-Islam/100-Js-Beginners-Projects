@@ -31,11 +31,12 @@ const colors = [
 	'DarkGreen',
 	'Gold',
 	'Gray',
-	'Green',
+	'Green'
 ];
 
 body.style.backgroundColor = 'red';
 button.addEventListener('click', function () {
 	const indexNo = parseInt(Math.random() * colors.length);
 	body.style.backgroundColor = colors[indexNo];
+
 })
