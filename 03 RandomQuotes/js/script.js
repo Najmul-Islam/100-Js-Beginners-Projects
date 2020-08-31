@@ -26,13 +26,15 @@
             quotes: "A critic is someone who never actually goes to the battle, yet who afterwards comes out shooting the wounded.",
             author: "Tyne Daly"
         }
-    ]
+    ];
 
-    const btn = document.getElementById('generate-btn');
+
+    const btn = document.querySelector("#generate-btn");
     btn.addEventListener("click", function () {
-        let randomQu = Math.floor(Math.random() * quotes.length);
+        let newQuotes = Math.floor(Math.random() * quotes.length);
 
-        document.getElementById("qutes-text").textContent = quotes[randomQu].quotes;
-        document.getElementById("author").textContent = "- " + quotes[randomQu].author;
+        document.getElementById('quote').textContent = quotes[newQuotes].quotes;
+        document.querySelector('.author').textContent = quotes[newQuotes].author;
     })
-}())
+
+})();
